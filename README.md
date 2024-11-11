@@ -1,4 +1,8 @@
 # examenDAWMarc
+
+## ÍNDICE
+1. [Introducción](INTRODUCCIÓN)
+
 ## INTRODUCCIÓN
 En este documento se explicará todo lo realizado de los ejercicios 2 y 3 del examen de la primera evalución de DAW. En el ejercicio 2, hay que crear un archivo txt en una máquina remota mediante ssh, y en el ejercicio 3, hay que crear en virtualhost en nuestra máquina.
 
@@ -10,6 +14,10 @@ En este documento se explicará todo lo realizado de los ejercicios 2 y 3 del ex
 * copia
 * /etc/apache2/sites-available/000-default.conf
 * daw.ejercicio3.com
+* ServerAdmin
+* DocumentRoot
+* ServerName
+* permisos
 
 ## ACTIVIDADES REALIZADAS
 ### EJ 2
@@ -28,16 +36,16 @@ Para realizar este ejercicio, **he empezado creando el directorio miWeb** con el
 Seguidamente he modificado el archivo */etc/hosts* con el comando *nano* introduciendo **daw.ejercicio3.com**.
 !["examenDAWMarc/imagenesej3/cap3.png](https://raw.githubusercontent.com/Suli427/examenDAWMarc/refs/heads/main/imagenesej3/cap3.png)
 
-Una vez modificado este archivo, he realizado una **copia del archivo** */etc/apache2/sites-available/000-default.conf* con el comando cp y lo he llamado daw.conf. En este archivo he puesto mi correo en el apartado de ServerAdmin, la ruta del html en **DocumentRoot** y daw.ejercicio3.com en ServerName. Todas estas modificaciones las he realizado con el comando *nano*.
+Una vez modificado este archivo, he realizado una **copia del archivo** */etc/apache2/sites-available/000-default.conf* con el comando cp y lo he llamado daw.conf. En este archivo he puesto mi correo en el apartado de **ServerAdmin**, la ruta del html en **DocumentRoot** y daw.ejercicio3.com en **ServerName**. Todas estas modificaciones las he realizado con el comando *nano*.
 !["examenDAWMarc/imagenesej3/cap5.png](https://raw.githubusercontent.com/Suli427/examenDAWMarc/refs/heads/main/imagenesej3/cap5.png)
 
-Finalmente le he puesto a la carpeta */var/miWeb* permisos a todos los usuarios de lectura, escritura y ejecución con el comando *chmod*.
+Finalmente le he puesto a la carpeta */var/miWeb* **permisos a todos los usuarios de lectura, escritura y ejecución** con el comando *chmod*.
 !["examenDAWMarc/imagenesej3/cap7.png](https://raw.githubusercontent.com/Suli427/examenDAWMarc/refs/heads/main/imagenesej3/cap7.png)
 
-En teoría con todo esto, debería funcionar si iniciara apache con el comando *sudo systemctl start apache* y poniendo daw.ejercicio3.com en el navegador.
+En teoría con todo esto, debería funcionar si iniciara apache con el comando *sudo systemctl start apache* y poniendo daw.ejercicio3.com en el **navegador**.
 !["examenDAWMarc/imagenesej3/cap6.png](https://raw.githubusercontent.com/Suli427/examenDAWMarc/refs/heads/main/imagenesej3/cap6.png)
 
-Como no funcionaba he movido la carpeta /*var/miWeb* a */var/www* y he modificado el DocumentRoot de daw.conf con la nueva ruta.
+Como no funcionaba **he movido la carpeta** /*var/miWeb* a */var/www* y **he modificado el DocumentRoot** de daw.conf con la nueva ruta.
 !["examenDAWMarc/imagenesej3/cap9.png](https://raw.githubusercontent.com/Suli427/examenDAWMarc/refs/heads/main/imagenesej3/cap9.png)
 
 ## RESULTADO FINAL
