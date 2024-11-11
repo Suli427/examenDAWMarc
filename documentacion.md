@@ -26,3 +26,6 @@ En teoría con todo esto, debería funcionar si iniciara apache con el comando *
 
 Como no funcioanaba he movido la carpeta /*var/miWeb* a */var/www* y he modificado el DocumentRoot de daw.conf con la nueva ruta.
 !["examenDAWMarc/imagenesej3/cap9.png](https://raw.githubusercontent.com/Suli427/examenDAWMarc/refs/heads/main/imagenesej3/cap9.png)
+
+Con esto último, ya funciona correctamente.
+!["examenDAWMarc/imagenesej3/cap10.png](https://raw.githubusercontent.com/Suli427/examenDAWMarc/refs/heads/main/imagenesej3/cap10.png)
